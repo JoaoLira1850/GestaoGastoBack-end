@@ -11,7 +11,7 @@ public class GestaSalarioDTO {
     private Long id;
     private LocalDate data;
     private String funcao;
-    private long salario;
+    private float salario;
 
     public GestaSalarioDTO() {
     }
@@ -45,11 +45,11 @@ public class GestaSalarioDTO {
         this.funcao = funcao;
     }
 
-    public long getSalario() {
+    public float  getSalario() {
         return salario;
     }
 
-    public void setSalario(long salario) {
+    public void setSalario(float salario) {
         this.salario = salario;
     }
 
