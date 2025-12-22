@@ -142,8 +142,6 @@ public class GestaoSalarioServiceTest {
 
         GestaoSalarioEntity salarioEntity = new GestaoSalarioEntity(salarioDTO1);
     
-      
-
         when(gestaoSalarioRepository.findById(id)).thenReturn(Optional.of(salarioEntity));
 
         gestaSalarioService.deletarSalario(id);
