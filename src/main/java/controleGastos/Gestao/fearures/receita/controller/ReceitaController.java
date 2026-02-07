@@ -4,6 +4,7 @@ package controleGastos.Gestao.fearures.receita.controller;
 import controleGastos.Gestao.fearures.pessoa.dto.DeleteDTO;
 import controleGastos.Gestao.fearures.receita.dto.ReceitaDTO;
 import controleGastos.Gestao.fearures.receita.service.ReceitaService;
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.Positive;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -33,7 +34,7 @@ public class ReceitaController {
 
 
     @PostMapping
-    public ResponseEntity<ReceitaDTO> criarReceita(@RequestBody ReceitaDTO receitaDTO, UriComponentsBuilder uri){
+    public ResponseEntity<ReceitaDTO> criarReceita(@RequestBody @Valid  ReceitaDTO receitaDTO, UriComponentsBuilder uri){
 
         ReceitaDTO receitaDTO1 = receitaService.criarReceita(receitaDTO);
 

@@ -46,7 +46,7 @@ public class ReceitaService {
     @Transactional
     public ReceitaDTO criarReceita(ReceitaDTO receitaDTO){
 
-        if (receitaDTO.planejamento() == null) throw new EntityNotFoundException("Planejamento Vazio!!");
+        if (receitaDTO.planejamento() == null) throw new EntityNotFoundException("Planejaento Vazio!!");
 
         Planejamento planejamento = planejamentoRepository.findById(receitaDTO.planejamento().id())
                 .orElseThrow(() -> new EntityNotFoundException("Planejamento Não Encontrado"));
