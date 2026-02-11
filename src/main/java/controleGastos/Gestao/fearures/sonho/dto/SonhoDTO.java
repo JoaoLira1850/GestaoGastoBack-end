@@ -30,4 +30,18 @@ public record SonhoDTO (
 
         ));
     }
+
+    public static SonhoDTO fromEntity(Sonho sonho){
+
+
+        return new SonhoDTO(
+                sonho.getId(),
+                sonho.getData(),
+                sonho.getTipoSonho(),
+                sonho.getValorSonho(),
+                sonho.getStatus(),
+                PessoaDTO.fromEntiy(sonho.getPessoa())
+        );
+
+    }
 }
