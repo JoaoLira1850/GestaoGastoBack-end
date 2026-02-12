@@ -50,7 +50,7 @@ public class AporteSonhoController {
         AposteSonhoDTO aposteSonhoDTO1 = aposteSonhoService.updateContribution(id, aposteSonhoDTO);
 
 
-        return ResponseEntity.ok(aposteSonhoDTO);
+        return ResponseEntity.ok(aposteSonhoDTO1);
 
 
 
