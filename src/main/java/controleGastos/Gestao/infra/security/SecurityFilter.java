@@ -54,7 +54,7 @@ public class SecurityFilter extends OncePerRequestFilter {
     public String tokenRecuperado(HttpServletRequest request){
 
 
-        String tokenRecuperado = request.getHeader("Autorization");
+        String tokenRecuperado = request.getHeader("Authorization");
 
 
         if (tokenRecuperado != null){
