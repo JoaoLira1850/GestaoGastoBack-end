@@ -1,5 +1,6 @@
 package controleGastos.Gestao.fearures.aposteSonho.dto;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import controleGastos.Gestao.fearures.aposteSonho.model.AposteSonho;
 import controleGastos.Gestao.fearures.aposteSonho.model.TipoDepositoSonho;
 import controleGastos.Gestao.fearures.sonho.dto.SonhoDTO;
@@ -11,6 +12,7 @@ import java.time.LocalDate;
 public record AposteSonhoDTO(
         Long id,
         SonhoDTO sonhoDTO,
+        @JsonFormat(pattern = "dd/MM/yyyy")
         LocalDate data,
         BigDecimal valor,
         TipoDepositoSonho tipoDepositoSonho
